@@ -1,0 +1,347 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #132f42;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .container img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    text-align: center;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #34495e;
+}
+
+#menuIcon {
+    display: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Beautified Hamburger Menu */
+.menu-icon-container {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon-container .menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links.show li {
+    margin: 10px 0;
+}
+
+.show .menu-icon-line:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.show .menu-icon-line:nth-child(2) {
+    opacity: 0;
+}
+
+.show .menu-icon-line:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+/* Header Styles */
+header {
+    background-image: url('Images/header-image.jpg'); /* Add the path to the header image */
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 200px 0;
+}
+
+header .container {
+    background-color: rgba(4, 4, 4, 0.551);
+    padding: 30px 0;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+/* About Section Styles */
+section#about {
+    background-color: #ffffff;
+    padding: 150px;
+}
+
+section#about h2 {
+    color: #2c3e50;
+    margin-bottom: 50px;
+}
+
+/* Services Section Styles */
+section#services {
+    background-color: #dadada;
+    text-align: center;
+    padding: 150px;
+}
+
+section#services h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+section#services ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+section#services li {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+section#services li i {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-right: 10px;
+}
+
+section#services li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Section Styles */
+section#gallery {
+    background-color: #fff;
+    text-align: center;
+    padding: 150px;
+}
+
+section#gallery h2 {
+    color: #2c3e50;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.809);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section Styles */
+section#contact {
+    background-color: #000000;
+    text-align: center;
+    padding: 15 0px;
+}
+
+section#contact h2 {
+    color: #ffffff;
+}
+
+section#contact p {
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #3b5998; /* Facebook Blue */
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #2d4373; /* Darker Facebook Blue */
+}
+
+.social-icons .instagram {
+    background-color: #e4405f; /* Instagram Pink */
+}
+
+.social-icons .instagram:hover {
+    background-color: #c13584; /* Darker Instagram Pink */
+}
+
+.social-icons .twitter {
+    background-color: #1da1f2; /* Twitter Blue */
+}
+
+.social-icons .twitter:hover {
+    background-color: #1a91da; /* Darker Twitter Blue */
+}
+
+.leagal {
+    text-align: center;
+}
+
+.leagal p {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 40px;
+}
+
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #menuIcon {
+        display: block;
+    }
+}
